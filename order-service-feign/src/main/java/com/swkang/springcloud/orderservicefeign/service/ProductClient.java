@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "product-service")
 public interface ProductClient {
 
-    @GetMapping("/api/v1/product/find")
+    @GetMapping("/api/v1/product/find")  //路径不能错
     String findById(@RequestParam(name = "id") int id);
+
 }

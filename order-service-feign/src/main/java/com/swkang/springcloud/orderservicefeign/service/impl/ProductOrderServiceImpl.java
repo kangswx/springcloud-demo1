@@ -24,8 +24,6 @@ public class ProductOrderServiceImpl implements ProductOrderService {
 
         JsonNode pro = JsonUtils.str2JsonNode(response);
 
-        System.out.println("JsonNode: "+pro.toString());
-
         ProductOrder productOrder = new ProductOrder();
         productOrder.setCreateTime(new Date());
         productOrder.setUserId(userId);

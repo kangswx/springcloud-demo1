@@ -2,10 +2,12 @@ package com.swkang.springcloud.orderservicefeign;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients    //对Feign的支持
+@EnableCircuitBreaker  //对hystrix的支持
 public class OrderServiceFeignApplication {
 
     public static void main(String[] args) {

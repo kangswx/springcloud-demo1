@@ -14,3 +14,8 @@ spring:
 #      default:
 #        connectTimeout: 5000
 #        readTimeout: 2000
+
+#\u81EA\u5B9A\u4E49\u8D1F\u8F7D\u5747\u8861\u7B56\u7565(\u968F\u673A\u5206\u914D)
+#product-service:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

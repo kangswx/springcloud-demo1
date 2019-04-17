@@ -20,6 +20,9 @@ public class ProductOrderServiceImpl implements ProductOrderService {
     @Override
     public ProductOrder save(int userId, int productId) {
 
+        if(1 == userId){
+            return null;
+        }
         String response = productClient.findById(productId);
 
         JsonNode pro = JsonUtils.str2JsonNode(response);

@@ -7,6 +7,11 @@ eureka:
 spring:
   application:
     name: order-service
+  redis: # redis\u914D\u7F6E\u4FE1\u606F
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 2000
 
 # \u5F00\u542Ffeign\u652F\u6301hystrix
 feign:

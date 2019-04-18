@@ -2,12 +2,16 @@ package com.swkang.springcloud.productservice.service.impl;
 
 import com.swkang.springcloud.productservice.domain.Product;
 import com.swkang.springcloud.productservice.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
 public class ProductServiceImpl implements ProductService {
+
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     private static Map<Integer, Product> daoMap = new HashMap<>();
 

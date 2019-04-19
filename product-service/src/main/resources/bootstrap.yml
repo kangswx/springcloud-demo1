@@ -12,23 +12,5 @@ spring:
       discovery:
         service-id: config-server      # 指定从哪个配置中心读取
         enabled: true
-      profile: dev  #环境
+      profile: test  #环境
       label: master  #分支
-    bus:
-      enabled: true  #消息总线配置
-      trace:
-        enabled: true  #消息总线配置
-  rabbitmq:    #rabbitmq配置
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
-#暴露bus-refresh的监控信息
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
-
-

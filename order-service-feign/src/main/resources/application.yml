@@ -1,60 +1,60 @@
-server:
-  port: 8781
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-spring:
-  application:
-    name: order-service
-  redis: # redis\u914D\u7F6E\u4FE1\u606F
-    database: 0
-    host: localhost
-    port: 6379
-    timeout: 2000
-
-# \u5F00\u542Ffeign\u652F\u6301hystrix
-feign:
-  hystrix:
-    enabled: true
-  client:
-    config:
-      default:
-        connectTimeout: 1000
-        readTimeout: 1000
-
-#\u8BBE\u7F6Ehystrix\u8D85\u65F6\u65F6\u95F4
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-#\u7981\u7528hystrix\u8D85\u65F6\u65F6\u95F4,\u4E00\u5B9A\u4E0D\u80FD\u7981\u7528
+#server:
+#  port: 8781
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#spring:
+#  application:
+#    name: order-service
+#  redis: # redis\u914D\u7F6E\u4FE1\u606F
+#    database: 0
+#    host: localhost
+#    port: 6379
+#    timeout: 2000
+#
+## \u5F00\u542Ffeign\u652F\u6301hystrix
+#feign:
+#  hystrix:
+#    enabled: true
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 1000
+#        readTimeout: 1000
+#
+##\u8BBE\u7F6Ehystrix\u8D85\u65F6\u65F6\u95F4
 #hystrix:
 #  command:
 #    default:
 #      execution:
-#        timeout:
-#          enabled: false
-
-# \u8BBE\u7F6Efeign\u8BF7\u6C42\u8D85\u65F6\u65F6\u95F4(\u4E00\u822C\u4E0D\u80FD\u8D85\u8FC7\u4E24\u79D2)
-#feign:
-#  client:
-#    config:
-#      default:
-#        connectTimeout: 5000
-#        readTimeout: 2000
-
-#\u81EA\u5B9A\u4E49\u8D1F\u8F7D\u5747\u8861\u7B56\u7565(\u968F\u673A\u5206\u914D)
-#product-service:
-#  ribbon:
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 1000
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+##\u7981\u7528hystrix\u8D85\u65F6\u65F6\u95F4,\u4E00\u5B9A\u4E0D\u80FD\u7981\u7528
+##hystrix:
+##  command:
+##    default:
+##      execution:
+##        timeout:
+##          enabled: false
+#
+## \u8BBE\u7F6Efeign\u8BF7\u6C42\u8D85\u65F6\u65F6\u95F4(\u4E00\u822C\u4E0D\u80FD\u8D85\u8FC7\u4E24\u79D2)
+##feign:
+##  client:
+##    config:
+##      default:
+##        connectTimeout: 5000
+##        readTimeout: 2000
+#
+##\u81EA\u5B9A\u4E49\u8D1F\u8F7D\u5747\u8861\u7B56\u7565(\u968F\u673A\u5206\u914D)
+##product-service:
+##  ribbon:
+##    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#
